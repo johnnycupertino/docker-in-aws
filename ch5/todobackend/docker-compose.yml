@@ -11,7 +11,7 @@ services:
       dockerfile: Dockerfile
       target: test
   release:
-    image: 385605022855.dkr.ecr.us-east-1.amazonaws.com/docker-in-aws/todobackend:latest
+    image: 062842913122.dkr.ecr.us-east-1.amazonaws.com/docker-in-aws/todobackend:latest
     build:
       context: .
       dockerfile: Dockerfile
@@ -21,7 +21,7 @@ services:
       MYSQL_USER: todo
       MYSQL_PASSWORD: password
   app:
-    image: 385605022855.dkr.ecr.us-east-1.amazonaws.com/docker-in-aws/todobackend:${APP_VERSION}
+    image: 062842913122.dkr.ecr.us-east-1.amazonaws.com/docker-in-aws/todobackend:${APP_VERSION}
     extends:
       service: release
     depends_on:
